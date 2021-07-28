@@ -1,24 +1,24 @@
 @import "mixins";
 
-$color-background: #fff;
+$color-background: #f7f8fa;
 $color-background-alpha: toRGBA($color-background, 0.5);
-$color-background-alt: #7b7ff6;
-$color-background-alt-contrast: #fff;
+$color-background-alt: #fff;
+$color-background-alt-contrast: #4D5458;
 $color-gray-line: #dcdde0;
-$color-text: #4d4d4d;
-$color-text-alt: #fff;
+$color-text: #fff;
+$color-text-alt: #4D5458;
 $color-text-gray: #a7a7a7;
-$color-text-label: #707070;
+$color-text-label: #fff;
 $color-text-disabled: #dbdbdb;
-$color-text-highlight: #9b9fff;
-$color-primary: #7b7ff6;
-$color-accent: #ff6961;
-$color-accent-active: darken(#ff6961, 10);
-$color-secondary: #4adede;
-$color-secondary-light: #a5efef;
+$color-text-highlight: #0F9AD7;
+$color-primary: #1076C4;
+$color-accent: #1076C4;
+$color-accent-active: darken(#1076C4, 10);
+$color-secondary: #4D5458;
+$color-secondary-light: lighten(#4D5458, 10);
 $color-warning: #ffa061;
 $color-error: #ff6961;
-$color-card-shadow: rgba(0, 0, 0, 0.2);
+$color-card-shadow: rgba(15,154,215, 0.2);
 
 $color-background-dark: #525252;
 $color-background-dark-alpha: toRGBA($color-background-dark, 0.5);
