@@ -99,7 +99,9 @@ $navbarHeight: 7.5rem;
       right: initial;
       bottom: initial;
       height: 100%;
-      width: 100%;
+      &[data-sideMenuWillDisappear="false"] {
+        width: 100%;
+      }
     }
 
     &[data-sideMenuOpened="true"] {
