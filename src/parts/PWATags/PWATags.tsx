@@ -5,18 +5,21 @@ const PWATags = () => {
       <meta name="format-detection" content="telephone=no" />
 
       {/* <!-- Android  --> */}
-      <meta name="theme-color" content="#7B7FF6" />
+      <meta name="theme-color" content="#1076C4" />
       <meta name="mobile-web-app-capable" content="yes" />
 
       {/* <!-- iOS --> */}
       <meta name="apple-mobile-web-app-title" content="Application Title" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="IFMakerSD" />
+      <meta
+        name="apple-mobile-web-app-title"
+        content="TrainRail Hackathon Edição Brasil"
+      />
 
       {/* <!-- Windows  --> */}
-      <meta name="msapplication-navbutton-color" content="#7B7FF6" />
-      <meta name="msapplication-TileColor" content="#7B7FF6" />
+      <meta name="msapplication-navbutton-color" content="#1076C4" />
+      <meta name="msapplication-TileColor" content="#1076C4" />
       <meta
         name="msapplication-TileImage"
         content="/ms-icons/mstile-144x144.png"
