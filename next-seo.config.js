@@ -1,11 +1,11 @@
 export default {
-  title: 'Laboratório IF Maker do IF Sudeste MG Santos Dumont',
-  titleTemplate: 'IFMakerSD | %s',
-  defaultTitle: 'IFMakerSD',
+  title: 'TrainRail Hackathon',
+  titleTemplate: 'TrainRail Hackathon | %s',
+  defaultTitle: 'TrainRail Hackathon',
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://www.ifmakersd.com.br/',
-    site_name: 'Laboratório IF Maker SD',
+    url: 'https://www.trainrailhackathonbrasil.com.br/',
+    site_name: 'TrainRail Hackathon',
   },
 };
