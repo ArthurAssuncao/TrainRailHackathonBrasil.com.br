@@ -11,9 +11,20 @@ interface NavBarProps {}
 const NavBar = (props: NavBarProps) => {
   const { t } = useTranslation();
   const [sideMenuOpened, setSideMenuOpened] = useState(false);
+  const [sideMenuWillDisappear, setSideMenuWillDisappear] = useState(false);
 
   const toggleSideMenu = () => {
-    setSideMenuOpened((prev) => !prev);
+    setSideMenuOpened((prev) => {
+      if (prev) {
+        setSideMenuWillDisappear(true);
+        setTimeout(() => {
+          setSideMenuWillDisappear(false);
+        }, 1000);
+      } else {
+        setSideMenuWillDisappear(true);
+      }
+      return !prev;
+    });
   };
 
   return (
@@ -30,7 +41,11 @@ const NavBar = (props: NavBarProps) => {
           <MenuHamburguer className={styles.menuIcon} opened={sideMenuOpened} />
         </div>
 
-        <ul className={styles.menu} data-sideMenuOpened={sideMenuOpened}>
+        <ul
+          className={styles.menu}
+          data-sideMenuOpened={sideMenuOpened}
+          data-sideMenuWillDisappear={sideMenuWillDisappear}
+        >
           <div
             className={styles.menuOverlay}
             onClick={() => toggleSideMenu()}
