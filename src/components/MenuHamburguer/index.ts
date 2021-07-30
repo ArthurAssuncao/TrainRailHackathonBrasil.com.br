@@ -1,3 +1,3 @@
-import { MenuHamburguer } from "./MenuHamburguer";
+import { MenuHamburguer } from './MenuHamburguer';
 
 export { MenuHamburguer };

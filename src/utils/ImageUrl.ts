@@ -1,11 +1,16 @@
+interface imageUrl {
+  src: string;
+  media: string;
+}
+
 const generateUrl = (url: string, size: number) => {
   return `//images.weserv.nl/?url=${url}&w=${size}`;
 };
 
 const ImageUrl = {
-  generateUrl: (url: string, size: number) => generateUrl(url, size),
+  generateUrl: (url: string, size: number): string => generateUrl(url, size),
 
-  generateCardSrcMedia: (url: string) => {
+  generateCardSrcMedia: (url: string): imageUrl => {
     const size = 350;
     return {
       src: generateUrl(url, size),
@@ -13,7 +18,7 @@ const ImageUrl = {
     };
   },
 
-  generateMobileSrcMedia: (url: string) => {
+  generateMobileSrcMedia: (url: string): imageUrl => {
     const size = 576;
     return {
       src: generateUrl(url, size),
@@ -21,7 +26,7 @@ const ImageUrl = {
     };
   },
 
-  generateTabletSrcMedia: (url: string) => {
+  generateTabletSrcMedia: (url: string): imageUrl => {
     const size = 768;
     return {
       src: generateUrl(url, size),
@@ -29,7 +34,7 @@ const ImageUrl = {
     };
   },
 
-  generateDesktopSrcMedia: (url: string) => {
+  generateDesktopSrcMedia: (url: string): imageUrl => {
     const size = 992;
     return {
       src: generateUrl(url, size),

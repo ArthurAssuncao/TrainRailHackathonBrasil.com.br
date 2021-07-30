@@ -1,38 +1,44 @@
-import { NextComponentType } from "next";
-import { DefaultSeo } from "next-seo";
-import { AppContext, AppInitialProps, AppProps } from "next/app";
-import Head from "next/head";
-import { useEffect } from "react";
-import { useTranslation, withSSR } from "react-i18next";
+import { NextComponentType } from 'next';
+import { DefaultSeo } from 'next-seo';
+import { AppContext, AppInitialProps, AppProps } from 'next/app';
+import { useRouter } from 'next/dist/client/router';
+import Head from 'next/head';
+import { useEffect } from 'react';
+import { useTranslation, withSSR } from 'react-i18next';
 // import your default seo configuration
-import SEO from "../../next-seo.config";
-import "../assets/styles/globals.scss";
-import { PWATags } from "../parts/PWATags";
+import SEO from '../../next-seo.config';
+import '../assets/styles/globals.scss';
+import { PWATags } from '../parts/PWATags';
 
-interface ReactGAProps {
-  debug: string;
-}
+// interface ReactGAProps {
+//   debug: string
+// }
 
 const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   Component,
   pageProps,
 }) => {
-  const reactGAOptions: ReactGAProps = {
-    debug: process.env.NODE_ENV === "production" ? "false" : "true",
-  };
+  // const reactGAOptions: ReactGAProps = {
+  //   debug: process.env.NODE_ENV === "production" ? "false" : "true",
+  // };
 
   const { i18n } = useTranslation();
-  const lang = i18n.language;
+  // const lang = i18n.language
+  const router = useRouter();
+  const langQuery =
+    router.query?.lang && typeof router.query?.lang == 'string'
+      ? router.query?.lang
+      : undefined;
 
   useEffect(() => {
-    if (lang) {
-      if (lang.startsWith("en")) {
-        i18n.changeLanguage("en");
-      } else if (lang.startsWith("pt")) {
-        i18n.changeLanguage("pt");
+    if (langQuery) {
+      if (langQuery.startsWith('en')) {
+        i18n.changeLanguage('en');
+      } else if (langQuery.startsWith('pt')) {
+        i18n.changeLanguage('pt');
       }
     }
-  }, []);
+  }, [langQuery, i18n]);
 
   return (
     <>
@@ -57,11 +63,11 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
       <script
         src="/path/to/bower_components/react-ga/dist/react-ga.min.js"
         async
-      ></script>
+      />
 
       <script async>
-        ReactGA.initialize('', reactGAOptions );
-        ReactGA.pageview(window.location.pathname + window.location.search);
+        {/* ReactGA.initialize('', reactGAOptions ); */}
+        {/* ReactGA.pageview(window.location.pathname + window.location.search); */}
       </script>
     </>
   );
@@ -69,17 +75,18 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
 
 const ExtendedApp = withSSR()(MyApp);
 
-ExtendedApp.getInitialProps = async (context: unknown): Promise<any> => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+ExtendedApp.getInitialProps = async (): Promise<any> => {
   const pt = {
-    ...require("../components/NavBar/lang/translation.pt.json"),
-    ...require("../components/LanguageButton/lang/translation.pt.json"),
+    ...require('../components/NavBar/lang/translation.pt.json'),
+    ...require('../components/LanguageButton/lang/translation.pt.json'),
   };
   const en = {
-    ...require("../components/NavBar/lang/translation.en.json"),
-    ...require("../components/LanguageButton/lang/translation.en.json"),
+    ...require('../components/NavBar/lang/translation.en.json'),
+    ...require('../components/LanguageButton/lang/translation.en.json'),
   };
   return {
-    initialLanguage: "pt",
+    initialLanguage: 'pt',
     initialI18nStore: { pt: { translation: pt }, en: { translation: en } },
   };
 };

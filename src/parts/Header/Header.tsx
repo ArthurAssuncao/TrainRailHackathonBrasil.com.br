@@ -1,8 +1,6 @@
-import { NavBar } from "../../components/NavBar";
+import { NavBar } from '../../components/NavBar';
 
-interface HeaderProps {}
-
-const Header = (props: HeaderProps) => {
+const Header = (): JSX.Element => {
   return (
     <header>
       <NavBar />

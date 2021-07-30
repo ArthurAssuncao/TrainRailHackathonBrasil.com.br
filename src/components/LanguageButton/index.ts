@@ -1,3 +1,3 @@
-import { LanguageButton } from "./LanguageButton";
+import { LanguageButton } from './LanguageButton';
 
 export { LanguageButton };

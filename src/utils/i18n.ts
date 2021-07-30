@@ -1,10 +1,10 @@
-import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
-import Backend from "i18next-http-backend";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import Backend from 'i18next-http-backend';
+import { initReactI18next } from 'react-i18next';
 
-export const FALLBACK_LANG = "pt";
-export const SUPPORTED_LANGUAGES = ["pt", "en"];
+export const FALLBACK_LANG = 'pt';
+export const SUPPORTED_LANGUAGES = ['pt', 'en'];
 
 i18n
   .use(Backend)
@@ -14,14 +14,14 @@ i18n
     resources: {
       pt: {
         translation: {
-          "Bem-vindo ao Hackathon":
-            "Bem-vindo ao TrainRail Hackathon edição organizada pelo Brasil",
+          'Bem-vindo ao Hackathon':
+            'Bem-vindo ao TrainRail Hackathon edição organizada pelo Brasil',
         },
       },
       en: {
         translation: {
-          "Bem-vindo ao Hackathon":
-            "Welcome to TrainRail Hackathon Brazilian edition",
+          'Bem-vindo ao Hackathon':
+            'Welcome to TrainRail Hackathon Brazilian edition',
         },
       },
     },
