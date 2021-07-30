@@ -1,3 +1,3 @@
-import { PWATags } from "./PWATags";
+import { PWATags } from './PWATags';
 
 export { PWATags };

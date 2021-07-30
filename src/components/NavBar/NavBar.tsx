@@ -1,19 +1,18 @@
-import classNames from "classnames";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { LanguageButton } from "../LanguageButton";
-import { MenuHamburguer } from "../MenuHamburguer";
-import LogoOficial from "./../../assets/images/logo-oficial.svg";
-import styles from "./NavBar.module.scss";
+import classNames from 'classnames';
+import Link from 'next/link';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LogoOficial from '../../assets/images/logo-oficial.svg';
+import { LanguageButton } from '../LanguageButton';
+import { MenuHamburguer } from '../MenuHamburguer';
+import styles from './NavBar.module.scss';
 
-interface NavBarProps {}
-
-const NavBar = (props: NavBarProps) => {
+const NavBar = (): JSX.Element => {
   const { t } = useTranslation();
   const [sideMenuOpened, setSideMenuOpened] = useState(false);
   const [sideMenuWillDisappear, setSideMenuWillDisappear] = useState(false);
 
-  const toggleSideMenu = () => {
+  const toggleSideMenu = (): void => {
     setSideMenuOpened((prev) => {
       if (prev) {
         setSideMenuWillDisappear(true);
@@ -29,9 +28,11 @@ const NavBar = (props: NavBarProps) => {
 
   return (
     <nav className={styles.container}>
-      <a className={styles.logoLink} href="/">
-        <LogoOficial className={styles.logo} />
-      </a>
+      <Link href="/">
+        <a className={styles.logoLink}>
+          <LogoOficial className={styles.logo} />
+        </a>
+      </Link>
       <div className={styles.menuWrapper}>
         <div
           className={styles.menuIconWrapper}
@@ -49,30 +50,30 @@ const NavBar = (props: NavBarProps) => {
           <div
             className={styles.menuOverlay}
             onClick={() => toggleSideMenu()}
-          ></div>
+          />
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t("participe")}
+              {t('participe')}
             </a>
           </li>
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t("cronograma")}
+              {t('cronograma')}
             </a>
           </li>
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t("parceiros")}
+              {t('parceiros')}
             </a>
           </li>
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t("perguntasFrequentes")}
+              {t('perguntasFrequentes')}
             </a>
           </li>
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t("contato")}
+              {t('contato')}
             </a>
           </li>
           <li className={classNames(styles.menuItem, styles.menuLanguage)}>
