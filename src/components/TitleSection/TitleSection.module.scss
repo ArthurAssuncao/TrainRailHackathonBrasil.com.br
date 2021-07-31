@@ -1,0 +1,16 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  height: 5rem;
+  padding: 0 3rem;
+  background-color: var(--color-accent, $color-accent);
+  color: var(--color-text-alt, $color-text-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3rem;
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 2rem;
+  font-size: var(--text-h5, $text-h5);
+  font-weight: bold;
+}
