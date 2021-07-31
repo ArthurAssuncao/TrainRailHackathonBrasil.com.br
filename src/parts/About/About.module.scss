@@ -8,12 +8,12 @@
   align-items: center;
 
   .logo {
-    margin: 3rem 0;
+    margin: 4rem 0;
   }
 
   .text {
-    font-size: var(--text-h6, $text-h6);
-    line-height: var(--text-h4, $text-h4);
+    font-size: var(--text-h5, $text-h5);
+    line-height: var(--text-h2, $text-h2);
     text-align: justify;
   }
 }
