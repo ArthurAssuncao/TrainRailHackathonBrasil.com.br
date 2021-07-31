@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -30,7 +31,14 @@ const NavBar = (): JSX.Element => {
     <nav className={styles.container}>
       <Link href="/">
         <a className={styles.logoLink}>
-          <LogoOficial className={styles.logo} />
+          {/* <LogoOficial className={styles.logo} /> */}
+          <Image
+            src={LogoOficial}
+            alt="Logo do Hackathon"
+            width={120}
+            height={40}
+            className={styles.logo}
+          />
         </a>
       </Link>
       <div className={styles.menuWrapper}>
