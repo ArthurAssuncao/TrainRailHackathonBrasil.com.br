@@ -1,0 +1,77 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 7.5rem;
+
+  .railway {
+  }
+
+  .textWrapper {
+    padding: 0 3rem;
+    position: relative;
+    color: var(--color-text-alt, $color-text-alt);
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    text-shadow: 0 0 5px var(--color-text, $color-text);
+
+    @include tablet-up {
+      font-size: var(--text-h5, $text-h5);
+    }
+
+    .title {
+      margin-bottom: 2rem;
+    }
+
+    .subtitle {
+    }
+  }
+
+  .icons {
+    margin-top: 2rem;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+
+    @include tablet-up {
+      width: 100%;
+      margin-top: 4rem;
+    }
+
+    .icon {
+      margin: 0 1rem !important;
+    }
+
+    img {
+      object-fit: contain;
+      height: 80px !important;
+
+      @include tablet-up {
+        height: 100px !important;
+      }
+    }
+
+    :nth-child(1) {
+      order: 4;
+    }
+    :nth-child(2) {
+      order: 1;
+    }
+    :nth-child(3) {
+      order: 2;
+    }
+    :nth-child(4) {
+      order: 3;
+    }
+    :nth-child(5) {
+      order: 5;
+    }
+  }
+}

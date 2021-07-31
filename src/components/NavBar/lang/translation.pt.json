@@ -1,7 +1,7 @@
 {
-  "participe": "Participe",
-  "cronograma": "Cronograma",
-  "parceiros": "Parceiros",
-  "perguntasFrequentes": "Perguntas Frequentes",
-  "contato": "Contato"
+  "navbar_participe": "Participe",
+  "navbar_cronograma": "Cronograma",
+  "navbar_parceiros": "Parceiros",
+  "navbar_perguntasFrequentes": "Perguntas Frequentes",
+  "navbar_contato": "Contato"
 }
