@@ -1,4 +1,5 @@
 import { ToastContainer } from 'react-toastify';
+import { About } from '../../components/About';
 import { Hero } from '../../components/Hero';
 import { Header } from '../Header';
 import styles from './Home.module.scss';
@@ -14,7 +15,9 @@ const Home = (): JSX.Element => {
       </div>
 
       {/* Main */}
-      <main></main>
+      <main>
+        <About />
+      </main>
 
       {/* Footer */}
     </div>
