@@ -1,4 +1,4 @@
-@import "mixins";
+@import 'mixins';
 
 $color-background: #f7f8fa;
 $color-background-alpha: toRGBA($color-background, 0.5);
@@ -12,7 +12,7 @@ $color-text-label: #fff;
 $color-text-disabled: #dbdbdb;
 $color-text-highlight: #0f9ad7;
 $color-primary: #1076c4;
-$color-accent: #1076c4;
+$color-accent: #0f9ad7;
 $color-accent-active: darken(#1076c4, 10);
 $color-secondary: #4d5458;
 $color-secondary-light: lighten(#4d5458, 10);
