@@ -1,0 +1,29 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  min-height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .firstCard {
+    margin: 2rem;
+  }
+
+  .cards {
+    @include tablet-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .card {
+      margin: 1.5rem 0;
+    }
+  }
+}

@@ -1,7 +1,9 @@
+import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { Hero } from '../../components/Hero';
 import { About } from '../About';
 import { Header } from '../Header';
+import { Participate } from '../Participate';
 import styles from './Home.module.scss';
 
 const Home = (): JSX.Element => {
@@ -15,8 +17,9 @@ const Home = (): JSX.Element => {
       </div>
 
       {/* Main */}
-      <main>
-        <About />
+      <main className={styles.main}>
+        <About className={styles.section} />
+        <Participate className={styles.section} />
       </main>
 
       {/* Footer */}
