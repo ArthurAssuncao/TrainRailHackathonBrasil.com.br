@@ -35,8 +35,8 @@ const NavBar = (): JSX.Element => {
           <Image
             src={LogoOficial}
             alt="Logo do Hackathon"
-            width={120}
-            height={40}
+            width={150}
+            height={60}
             className={styles.logo}
           />
         </a>
