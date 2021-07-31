@@ -1,6 +1,6 @@
 import { ToastContainer } from 'react-toastify';
-import { About } from '../../components/About';
 import { Hero } from '../../components/Hero';
+import { About } from '../About';
 import { Header } from '../Header';
 import styles from './Home.module.scss';
 

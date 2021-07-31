@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import LogoOficial from '../../assets/images/logo-oficial.jpg';
-import { TitleSection } from '../TitleSection';
+import { TitleSection } from '../../components/TitleSection';
 import styles from './About.module.scss';
 
 interface AboutProps {
