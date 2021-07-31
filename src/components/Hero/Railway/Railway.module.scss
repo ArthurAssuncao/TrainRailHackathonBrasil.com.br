@@ -1,0 +1,48 @@
+@import '../../assets/styles/sass/resources';
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  @include tablet-up {
+    transform-origin: 50% 0;
+    transform: scale(1.5);
+    margin-bottom: 13rem;
+  }
+
+  .map {
+    overflow: visible;
+  }
+
+  .line {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: draw 5s infinite alternate;
+  }
+
+  .titleWrapper {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      font-weight: bold;
+      color: var(--color-text-alt, $color-text-alt);
+      line-height: 20px;
+    }
+  }
+}
