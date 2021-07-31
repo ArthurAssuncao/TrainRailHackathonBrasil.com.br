@@ -11,7 +11,7 @@ const MenuHamburguer = (props: MenuHamburguerProps): JSX.Element => {
   return (
     <div
       className={classnames(className, styles.container)}
-      data-menuIconOpen={opened}
+      data-menuiconopen={opened}
     >
       <span />
       <span />

@@ -76,12 +76,12 @@ $navbarHeight: 7.5rem;
     // transition: width 1s ease;
     color: var(--color-text, $color-text);
 
-    &[data-sideMenuWillDisappear='false'] {
+    &[data-sidemenuwilldisappear='false'] {
       width: 0;
     }
 
-    &[data-sideMenuOpened='false'] {
-      &[data-sideMenuWillDisappear='true'] {
+    &[data-sidemenuopened='false'] {
+      &[data-sidemenuwilldisappear='true'] {
         animation: menuSlideOut 1s forwards;
 
         .menuOverlay {
@@ -99,12 +99,12 @@ $navbarHeight: 7.5rem;
       right: initial;
       bottom: initial;
       height: 100%;
-      &[data-sideMenuWillDisappear='false'] {
+      &[data-sidemenuwilldisappear='false'] {
         width: 100%;
       }
     }
 
-    &[data-sideMenuOpened='true'] {
+    &[data-sidemenuopened='true'] {
       // width: 80vw;
       animation: menuSlideIn 1s forwards;
       box-shadow: -2px 0px 5px var(--color-accent, $color-accent);
@@ -128,7 +128,7 @@ $navbarHeight: 7.5rem;
         $color-background-alt-contrast
       );
 
-      &[data-sideMenuWillDisappear='false'] {
+      &[data-sidemenuwilldisappear='false'] {
         width: 0vw;
       }
 

@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '../../assets/styles/sass/resources';
 
 $width: 48px;
@@ -15,10 +16,10 @@ $height: 42px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
 
-  &[data-menuIconOpen='true'] {
+  &[data-menuiconopen='true'] {
     span {
       &:nth-child(1) {
-        top: #{$height / 3};
+        top: math.div($height, 3);
         width: 0%;
         left: 50%;
       }
@@ -31,7 +32,7 @@ $height: 42px;
       }
 
       &:nth-child(4) {
-        top: #{$height / 3};
+        top: math.div($height, 3);
         width: 0%;
         left: 50%;
       }
@@ -56,11 +57,11 @@ $height: 42px;
 
     &:nth-child(2),
     &:nth-child(3) {
-      top: #{$height / 3};
+      top: math.div($height, 3);
     }
 
     &:nth-child(4) {
-      top: #{$height / 3 * 2};
+      top: #{math.div($height, 3) * 2};
     }
   }
 

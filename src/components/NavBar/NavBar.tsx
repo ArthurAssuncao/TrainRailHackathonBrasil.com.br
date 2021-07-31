@@ -44,8 +44,8 @@ const NavBar = (): JSX.Element => {
 
         <ul
           className={styles.menu}
-          data-sideMenuOpened={sideMenuOpened}
-          data-sideMenuWillDisappear={sideMenuWillDisappear}
+          data-sidemenuopened={sideMenuOpened}
+          data-sidemenuwilldisappear={sideMenuWillDisappear}
         >
           <div
             className={styles.menuOverlay}
@@ -53,27 +53,27 @@ const NavBar = (): JSX.Element => {
           />
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t('participe')}
+              {t('navbar_participe')}
             </a>
           </li>
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t('cronograma')}
+              {t('navbar_cronograma')}
             </a>
           </li>
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t('parceiros')}
+              {t('navbar_parceiros')}
             </a>
           </li>
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t('perguntasFrequentes')}
+              {t('navbar_perguntasFrequentes')}
             </a>
           </li>
           <li className={styles.menuItem}>
             <a className={styles.menuItemLink} href="#">
-              {t('contato')}
+              {t('navbar_contato')}
             </a>
           </li>
           <li className={classNames(styles.menuItem, styles.menuLanguage)}>
