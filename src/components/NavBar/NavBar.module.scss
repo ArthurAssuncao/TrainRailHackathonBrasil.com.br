@@ -49,11 +49,25 @@ $navbarHeight: 7.5rem;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  padding: 0rem 2.5rem 0rem 2.5rem;
 
   .logoLink {
-    height: 4.8rem;
-    width: 15rem;
+    img {
+      height: 4rem;
+      width: 12rem;
+      object-fit: contain;
+
+      @include tablet-up {
+        height: 4.5rem;
+        width: 13rem;
+      }
+
+      @include desktop-up {
+        height: 5rem;
+        width: 15rem;
+      }
+    }
+
     .logo {
       filter: contrast(0) brightness(90);
       transition: all 0.5s ease;
