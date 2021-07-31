@@ -67,14 +67,23 @@ $navbarHeight: 7.5rem;
   }
 
   .menu {
+    z-index: $z-index-over;
     position: absolute;
     top: $navbarHeight;
     right: 0;
     bottom: 0;
-    background-color: var(--color-background, $color-background);
     height: 100vh;
     // transition: width 1s ease;
     color: var(--color-text, $color-text);
+
+    .menuList {
+      z-index: $z-index-over;
+      height: 100vh;
+      right: 0;
+      bottom: 0;
+      background-color: var(--color-background, $color-background);
+      position: relative;
+    }
 
     &[data-sidemenuwilldisappear='false'] {
       width: 0;
@@ -116,7 +125,7 @@ $navbarHeight: 7.5rem;
 
     .menuOverlay {
       position: absolute;
-      z-index: -1;
+      z-index: #{$z-index-over - 1};
       right: 0;
       bottom: 0;
       opacity: 0.8;

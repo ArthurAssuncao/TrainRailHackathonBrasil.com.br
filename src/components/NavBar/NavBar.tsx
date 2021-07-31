@@ -42,7 +42,7 @@ const NavBar = (): JSX.Element => {
           <MenuHamburguer className={styles.menuIcon} opened={sideMenuOpened} />
         </div>
 
-        <ul
+        <div
           className={styles.menu}
           data-sidemenuopened={sideMenuOpened}
           data-sidemenuwilldisappear={sideMenuWillDisappear}
@@ -51,35 +51,37 @@ const NavBar = (): JSX.Element => {
             className={styles.menuOverlay}
             onClick={() => toggleSideMenu()}
           />
-          <li className={styles.menuItem}>
-            <a className={styles.menuItemLink} href="#">
-              {t('navbar_participe')}
-            </a>
-          </li>
-          <li className={styles.menuItem}>
-            <a className={styles.menuItemLink} href="#">
-              {t('navbar_cronograma')}
-            </a>
-          </li>
-          <li className={styles.menuItem}>
-            <a className={styles.menuItemLink} href="#">
-              {t('navbar_parceiros')}
-            </a>
-          </li>
-          <li className={styles.menuItem}>
-            <a className={styles.menuItemLink} href="#">
-              {t('navbar_perguntasFrequentes')}
-            </a>
-          </li>
-          <li className={styles.menuItem}>
-            <a className={styles.menuItemLink} href="#">
-              {t('navbar_contato')}
-            </a>
-          </li>
-          <li className={classNames(styles.menuItem, styles.menuLanguage)}>
-            <LanguageButton />
-          </li>
-        </ul>
+          <ul className={styles.menuList}>
+            <li className={styles.menuItem}>
+              <a className={styles.menuItemLink} href="#">
+                {t('navbar_participe')}
+              </a>
+            </li>
+            <li className={styles.menuItem}>
+              <a className={styles.menuItemLink} href="#">
+                {t('navbar_cronograma')}
+              </a>
+            </li>
+            <li className={styles.menuItem}>
+              <a className={styles.menuItemLink} href="#">
+                {t('navbar_parceiros')}
+              </a>
+            </li>
+            <li className={styles.menuItem}>
+              <a className={styles.menuItemLink} href="#">
+                {t('navbar_perguntasFrequentes')}
+              </a>
+            </li>
+            <li className={styles.menuItem}>
+              <a className={styles.menuItemLink} href="#">
+                {t('navbar_contato')}
+              </a>
+            </li>
+            <li className={classNames(styles.menuItem, styles.menuLanguage)}>
+              <LanguageButton />
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
