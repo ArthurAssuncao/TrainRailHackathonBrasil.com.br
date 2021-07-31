@@ -1,0 +1,111 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    order: 2;
+    color: var(--color-accent, $color-accent);
+    margin: 1rem 0;
+    font-size: var(--text-h5, $text-h5);
+    line-height: var(--text-h3, $text-h3);
+  }
+
+  .icon {
+    order: 1;
+    color: var(--color-accent, $color-accent);
+    height: 4.8rem;
+    width: 4.8rem;
+    font-size: 4.8rem;
+  }
+
+  .text {
+    order: 3;
+    text-align: justify;
+    font-size: var(--text-h6, $text-h6);
+    line-height: var(--text-h4, $text-h4);
+  }
+
+  &[data-iscard='false'] {
+    flex-direction: column;
+
+    .title {
+      order: 2;
+    }
+
+    .icon {
+      order: 1;
+    }
+
+    .text {
+      order: 3;
+    }
+  }
+
+  &[data-iscard='true'] {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .title {
+      order: 1;
+      width: 100%;
+      text-align: center;
+    }
+
+    .icon {
+      order: 2;
+      width: 15%;
+      min-width: 48px;
+    }
+
+    .text {
+      order: 3;
+      width: 85%;
+      max-width: calc(100% - 48px);
+      font-size: var(--text-h6, $text-h6);
+      line-height: var(--text-h4, $text-h4);
+    }
+  }
+
+  @include tablet-up {
+    &[data-iscard='true'] {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: var(--color-background, $color-background);
+      box-shadow: 0 0 1.5rem var(--card-shadow, $color-card-shadow);
+      padding: 2rem 2rem 3rem 2rem;
+      border-radius: 1rem;
+      transition: background-color 1s ease;
+
+      &:hover {
+        background-color: var(--card-shadow, $color-card-shadow);
+      }
+
+      .title {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+      }
+
+      .icon {
+        order: 1;
+        width: 100%;
+        min-width: inherit;
+        text-align: center;
+      }
+
+      .text {
+        order: 3;
+        width: 100%;
+        max-width: inherit;
+        text-align: center;
+      }
+    }
+  }
+}

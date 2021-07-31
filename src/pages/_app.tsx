@@ -82,12 +82,14 @@ ExtendedApp.getInitialProps = async (): Promise<any> => {
     ...require('../components/LanguageButton/lang/translation.pt.json'),
     ...require('../components/Hero/lang/translation.pt.json'),
     ...require('../parts/About/lang/translation.pt.json'),
+    ...require('../parts/Participate/lang/translation.pt.json'),
   };
   const en = {
     ...require('../components/NavBar/lang/translation.en.json'),
     ...require('../components/LanguageButton/lang/translation.en.json'),
     ...require('../components/Hero/lang/translation.en.json'),
     ...require('../parts/About/lang/translation.en.json'),
+    ...require('../parts/Participate/lang/translation.en.json'),
   };
   return {
     initialLanguage: 'pt',

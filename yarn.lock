@@ -1068,6 +1068,16 @@
   resolved "https://registry.yarnpkg.com/@hutson/parse-repository-url/-/parse-repository-url-3.0.2.tgz#98c23c950a3d9b6c8f0daed06da6c3af06981340"
   integrity sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==
 
+"@iconify-icons/mdi@^1.1.17":
+  version "1.1.17"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/mdi/-/mdi-1.1.17.tgz#e96afe71577983a376a638e4c517800c0d79deff"
+  integrity sha512-ssRWa5z2gyDVSsHD2aVjNmIOd4vl6zr9RuKp7ol2Hg0xrwdihQELSZ6VG4N4BPytfajYEcOZsuFL/+aB5N5tgw==
+
+"@iconify/icons-ant-design@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-ant-design/-/icons-ant-design-1.1.0.tgz#013574b09d8dd167490e6fd6dd0b2805d7170854"
+  integrity sha512-sE4NKXMfN9arTFmfvt4zARoS+hjhd8P0z5osjWYxVkQPCri1RYpF+NRa9MsDh3ScqAcSU9wfUeQ3X4Gf8GrcNQ==
+
 "@iconify/icons-clarity@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@iconify/icons-clarity/-/icons-clarity-1.1.1.tgz#b981c07d58cc022d563ee1ba0bff928fdd580314"
@@ -1077,6 +1087,16 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@iconify/icons-emojione-v1/-/icons-emojione-v1-1.1.0.tgz#a81f719bb27f224d96846ae9f1941330ede15dcd"
   integrity sha512-okO3smAhpM3t1phhvnxuA+E5yaVrPRup/OezujLYOMeivrAAlbeK89l6qmMTTD27zRPs54+j2l7TA0zaAcjFfA==
+
+"@iconify/icons-ion@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-ion/-/icons-ion-1.1.2.tgz#2f4594d12cce2fe1da96b975a3da84d29084865e"
+  integrity sha512-IEaH/7PgyeiwZYHd/Xt0hVU1K/Cfrr1IvB8WZJ5eUw7q4suZi4OkggWmzsm2TODuTnlb7NsxLJTxVSFYUMPmWg==
+
+"@iconify/icons-mdi@^1.1.17":
+  version "1.1.17"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-mdi/-/icons-mdi-1.1.17.tgz#48caf7756b0468670aa9c7336f5d76751389e76b"
+  integrity sha512-9Ot1n1bpyTtOj0jzY44My8KOKaHNyZSFry2U1YFt8sCykKVLttoKcxYnXLGN9HIFzY7eKjOLvhA1Vbjt3ZFhpQ==
 
 "@iconify/react@^1.1.4":
   version "1.1.4"
