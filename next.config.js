@@ -1,8 +1,6 @@
 const withPlugins = require('next-compose-plugins');
-const withImages = require('next-images');
 const withPWA = require('next-pwa');
 const path = require('path');
-const withReactSvg = require('next-react-svg');
 
 const nextConfig = {
   webpack: function (config) {
@@ -32,17 +30,6 @@ module.exports = withPlugins(
           dest: 'public',
         },
       },
-    ],
-    [
-      withReactSvg(
-        withImages({
-          include: path.resolve(__dirname, 'src/assets/images'),
-          fileExtensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
-          webpack(config, options) {
-            return config;
-          },
-        })
-      ),
     ],
   ],
   nextConfig
