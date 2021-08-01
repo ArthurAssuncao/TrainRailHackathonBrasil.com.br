@@ -21,6 +21,10 @@
     border-bottom: 2px solid var(--color-accent, $color-accent);
     padding: 1rem 3rem;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     .headerIcon {
       font-size: 3.2rem;
       color: var(--color-accent, $color-accent);

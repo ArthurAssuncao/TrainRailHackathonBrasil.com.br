@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
+import { Slide } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import { Accordion } from '../../components/Accordion';
 import { TitleSection } from '../../components/TitleSection';
@@ -16,7 +16,7 @@ const FAQ = (props: FAQProps): JSX.Element => {
 
   return (
     <section className={classNames(className, styles.container)}>
-      <Fade triggerOnce={true}>
+      <Slide direction="up" triggerOnce>
         <TitleSection title={t('faq_title')} className={styles.title} />
         <div className={styles.faqs}>
           <Accordion
@@ -55,7 +55,7 @@ const FAQ = (props: FAQProps): JSX.Element => {
             content={t('faq_question_7_content')}
           />
         </div>
-      </Fade>
+      </Slide>
     </section>
   );
 };

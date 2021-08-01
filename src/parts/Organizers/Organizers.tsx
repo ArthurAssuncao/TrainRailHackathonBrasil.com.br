@@ -36,7 +36,7 @@ const Organizers = (props: OrganizersProps): JSX.Element => {
 
   return (
     <section className={classNames(className, styles.container)}>
-      <Slide direction="up">
+      <Slide direction="up" triggerOnce>
         <TitleSection title={t('organizers_title')} className={styles.title} />
         <div className={styles.organizers}>
           {organizers.map((organizer) => {

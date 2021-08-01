@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { intervalToDuration } from 'date-fns';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Slide } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import * as workerTimers from 'worker-timers';
 import styles from './Countdown.module.scss';
@@ -53,7 +53,7 @@ const Countdown = (props: CountdownProps): JSX.Element => {
 
   return (
     <div className={classNames(className, styles.container)}>
-      <Slide direction="up" cascade>
+      <Fade cascade triggerOnce>
         <MemoizedCountdownItem
           className={styles.item}
           title={t('countdown_months')}
@@ -84,7 +84,7 @@ const Countdown = (props: CountdownProps): JSX.Element => {
           value={timeLeft.seconds ?? 0}
           maxValue={60}
         />
-      </Slide>
+      </Fade>
     </div>
   );
 };

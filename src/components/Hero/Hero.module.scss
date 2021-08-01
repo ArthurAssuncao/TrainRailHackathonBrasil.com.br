@@ -73,11 +73,11 @@
     }
     :nth-child(3) {
       order: 2;
-      filter: contrast(10);
+      filter: contrast(1.1);
     }
     :nth-child(4) {
       order: 3;
-      filter: contrast(1.5);
+      filter: contrast(1.1);
     }
     :nth-child(5) {
       order: 5;
