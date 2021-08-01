@@ -1,0 +1,30 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  min-height: 50vh;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .organizers {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include tablet-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+      grid-column-gap: 20rem;
+    }
+
+    .organizer {
+      font-size: var(--text-h5, $text-h5);
+      line-height: var(--text-h1, $text-h1);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  min-height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .faqs {
+    .faqItem {
+      margin: 2rem 0;
+    }
+  }
+}
