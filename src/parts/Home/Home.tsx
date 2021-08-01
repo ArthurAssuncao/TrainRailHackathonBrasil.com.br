@@ -2,8 +2,10 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import { Hero } from '../../components/Hero';
 import { About } from '../About';
+import { Countdown } from '../Countdown/Countdown';
 import { Header } from '../Header';
 import { Participate } from '../Participate';
+import { Schedule } from '../Schedule';
 import styles from './Home.module.scss';
 
 const Home = (): JSX.Element => {
@@ -20,6 +22,8 @@ const Home = (): JSX.Element => {
       <main className={styles.main}>
         <About className={styles.section} />
         <Participate className={styles.section} />
+        <Schedule className={styles.section} />
+        <Countdown className={styles.section} />
       </main>
 
       {/* Footer */}

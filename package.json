@@ -30,6 +30,7 @@
     "@types/yup": "^0.29.13",
     "@unly/universal-language-detector": "^2.0.3",
     "classnames": "^2.3.1",
+    "date-fns": "^2.23.0",
     "file-loader": "^6.2.0",
     "formik": "^2.2.9",
     "husky": "^7.0.1",
@@ -68,6 +69,7 @@
     "stylelint-scss": "^3.20.1",
     "typescript-eslint-parser": "^22.0.0",
     "url-loader": "^4.1.1",
+    "worker-timers": "^7.0.35",
     "yup": "^0.32.9"
   },
   "devDependencies": {

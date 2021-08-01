@@ -1,0 +1,9 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  min-height: 50vh;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
