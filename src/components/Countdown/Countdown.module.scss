@@ -1,0 +1,21 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include tablet-up {
+    flex-direction: row;
+  }
+
+  .item {
+    margin: 2rem;
+
+    @include desktop-up {
+      margin: 2rem 4rem;
+    }
+  }
+}
