@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import Image from 'next/image';
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
+import { Slide } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import LogoAstonrail from '../../assets/images/parceiros/astonrail.png';
 import LogoIFF from '../../assets/images/parceiros/iff-institut-de-formation-ferroviare.svg';
@@ -25,7 +25,7 @@ const Partners = (props: PartnersProps): JSX.Element => {
 
   return (
     <section className={classNames(className, styles.container)}>
-      <Fade>
+      <Slide direction="up" triggerOnce>
         <TitleSection title={t('partners_title')} className={styles.title} />
         <div className={styles.icons}>
           <div className={styles.icon}>
@@ -101,7 +101,7 @@ const Partners = (props: PartnersProps): JSX.Element => {
             />
           </div>
         </div>
-      </Fade>
+      </Slide>
     </section>
   );
 };

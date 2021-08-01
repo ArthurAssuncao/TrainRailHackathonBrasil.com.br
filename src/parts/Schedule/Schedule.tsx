@@ -16,7 +16,7 @@ const Schedule = (props: ScheduleProps): JSX.Element => {
 
   return (
     <section className={classNames(className, styles.container)}>
-      <Slide direction="left">
+      <Slide direction="up" triggerOnce>
         <TitleSection title={t('schedule_title')} className={styles.title} />
         <div className={styles.schedules}>
           <ScheduleItem

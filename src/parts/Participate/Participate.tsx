@@ -19,7 +19,7 @@ const Participate = (props: ParticipateProps): JSX.Element => {
 
   return (
     <section className={classNames(className, styles.container)}>
-      <Slide direction="up">
+      <Slide direction="up" triggerOnce>
         <TitleSection title={t('participate_title')} className={styles.title} />
         <ParticipateCard
           className={classNames(styles.firstCard, styles.card)}
@@ -29,7 +29,7 @@ const Participate = (props: ParticipateProps): JSX.Element => {
           type="no-card"
         />
       </Slide>
-      <Slide direction="up" cascade>
+      <Slide direction="up" cascade triggerOnce>
         <div className={styles.cards}>
           <ParticipateCard
             className={styles.card}
