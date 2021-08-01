@@ -5,6 +5,7 @@ import { About } from '../About';
 import { Countdown } from '../Countdown/Countdown';
 import { Header } from '../Header';
 import { Participate } from '../Participate';
+import { Partners } from '../Partners';
 import { Schedule } from '../Schedule';
 import styles from './Home.module.scss';
 
@@ -24,6 +25,7 @@ const Home = (): JSX.Element => {
         <Participate className={styles.section} />
         <Schedule className={styles.section} />
         <Countdown className={styles.section} />
+        <Partners className={styles.section} />
       </main>
 
       {/* Footer */}
