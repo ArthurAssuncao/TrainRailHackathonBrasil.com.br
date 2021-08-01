@@ -3,6 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import { Hero } from '../../components/Hero';
 import { About } from '../About';
 import { Countdown } from '../Countdown/Countdown';
+import { FAQ } from '../FAQ';
 import { Header } from '../Header';
 import { Organizers } from '../Organizers';
 import { Participate } from '../Participate';
@@ -28,6 +29,7 @@ const Home = (): JSX.Element => {
         <Countdown className={styles.section} />
         <Partners className={styles.section} />
         <Organizers className={styles.section} />
+        <FAQ className={styles.section} />
       </main>
 
       {/* Footer */}

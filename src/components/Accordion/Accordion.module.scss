@@ -1,0 +1,55 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-background, $color-background);
+  box-shadow: 0 0 1rem var(--color-card-shadow, $color-card-shadow);
+  border-radius: 1rem;
+  width: 100%;
+
+  &[data-isopen='false'] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid var(--color-accent, $color-accent);
+    padding: 1rem 3rem;
+
+    .headerIcon {
+      font-size: 3.2rem;
+      color: var(--color-accent, $color-accent);
+      margin-right: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .headerTitle {
+      color: var(--color-accent, $color-accent);
+      font-size: var(--text-h6, $text-h6);
+      line-height: 4rem;
+    }
+  }
+
+  .content {
+    padding: 2rem 3rem;
+    line-height: var(--text-h4, $text-h4);
+    height: 100%;
+    max-height: 200px;
+    opacity: 1;
+    transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+  }
+
+  &[data-isopen='false'] {
+    .content {
+      padding: 0rem 3rem;
+      opacity: 0;
+      max-height: 0;
+    }
+  }
+}
