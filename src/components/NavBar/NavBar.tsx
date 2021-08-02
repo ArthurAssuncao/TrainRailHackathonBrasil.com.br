@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link as LinkScroll } from 'react-scroll';
 import LogoOficial from '../../assets/images/logo-oficial.svg';
 import { LanguageButton } from '../LanguageButton';
 import { MenuHamburguer } from '../MenuHamburguer';
@@ -12,6 +13,13 @@ const NavBar = (): JSX.Element => {
   const { t } = useTranslation();
   const [sideMenuOpened, setSideMenuOpened] = useState(false);
   const [sideMenuWillDisappear, setSideMenuWillDisappear] = useState(false);
+  const scrollOptions = {
+    class: styles.active,
+    spy: true,
+    smooth: true,
+    offset: 0,
+    duration: 500,
+  };
 
   const toggleSideMenu = (): void => {
     setSideMenuOpened((prev) => {
@@ -61,29 +69,74 @@ const NavBar = (): JSX.Element => {
           />
           <ul className={styles.menuList}>
             <li className={styles.menuItem}>
-              <a className={styles.menuItemLink} href="#">
-                {t('navbar_participe')}
-              </a>
+              <LinkScroll
+                activeClass={scrollOptions.class}
+                to="participate"
+                spy={scrollOptions.spy}
+                smooth={scrollOptions.smooth}
+                offset={scrollOptions.offset}
+                duration={scrollOptions.duration}
+              >
+                <span className={styles.menuItemLink}>
+                  {t('navbar_participe')}
+                </span>
+              </LinkScroll>
             </li>
             <li className={styles.menuItem}>
-              <a className={styles.menuItemLink} href="#">
-                {t('navbar_cronograma')}
-              </a>
+              <LinkScroll
+                activeClass={scrollOptions.class}
+                to="schedule"
+                spy={scrollOptions.spy}
+                smooth={scrollOptions.smooth}
+                offset={scrollOptions.offset}
+                duration={scrollOptions.duration}
+              >
+                <span className={styles.menuItemLink}>
+                  {t('navbar_cronograma')}
+                </span>
+              </LinkScroll>
             </li>
             <li className={styles.menuItem}>
-              <a className={styles.menuItemLink} href="#">
-                {t('navbar_parceiros')}
-              </a>
+              <LinkScroll
+                activeClass={scrollOptions.class}
+                to="partners"
+                spy={scrollOptions.spy}
+                smooth={scrollOptions.smooth}
+                offset={scrollOptions.offset}
+                duration={scrollOptions.duration}
+              >
+                <span className={styles.menuItemLink}>
+                  {t('navbar_parceiros')}
+                </span>
+              </LinkScroll>
             </li>
             <li className={styles.menuItem}>
-              <a className={styles.menuItemLink} href="#">
-                {t('navbar_perguntasFrequentes')}
-              </a>
+              <LinkScroll
+                activeClass={scrollOptions.class}
+                to="faq"
+                spy={scrollOptions.spy}
+                smooth={scrollOptions.smooth}
+                offset={scrollOptions.offset}
+                duration={scrollOptions.duration}
+              >
+                <span className={styles.menuItemLink}>
+                  {t('navbar_perguntasFrequentes')}
+                </span>
+              </LinkScroll>
             </li>
             <li className={styles.menuItem}>
-              <a className={styles.menuItemLink} href="#">
-                {t('navbar_contato')}
-              </a>
+              <LinkScroll
+                activeClass={scrollOptions.class}
+                to="contact"
+                spy={scrollOptions.spy}
+                smooth={scrollOptions.smooth}
+                offset={scrollOptions.offset}
+                duration={scrollOptions.duration}
+              >
+                <span className={styles.menuItemLink}>
+                  {t('navbar_contato')}
+                </span>
+              </LinkScroll>
             </li>
             <li className={classNames(styles.menuItem, styles.menuLanguage)}>
               <LanguageButton />

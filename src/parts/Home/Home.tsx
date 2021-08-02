@@ -1,9 +1,11 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import { ToastContainer } from 'react-toastify';
 import { Hero } from '../../components/Hero';
 import { About } from '../About';
 import { Countdown } from '../Countdown/Countdown';
 import { FAQ } from '../FAQ';
+import { Footer } from '../Footer';
 import { Header } from '../Header';
 import { Organizers } from '../Organizers';
 import { Participate } from '../Participate';
@@ -23,16 +25,33 @@ const Home = (): JSX.Element => {
 
       {/* Main */}
       <main className={styles.main}>
-        <About className={styles.section} />
-        <Participate className={styles.section} />
-        <Schedule className={styles.section} />
-        <Countdown className={styles.section} />
-        <Partners className={styles.section} />
-        <Organizers className={styles.section} />
-        <FAQ className={styles.section} />
+        <Element name="about">
+          <About className={styles.section} />
+        </Element>
+        <Element name="participate">
+          <Participate className={styles.section} />
+        </Element>
+        <Element name="schedule">
+          <Schedule className={styles.section} />
+        </Element>
+        <Element name="countdown">
+          <Countdown className={styles.section} />
+        </Element>
+        <Element name="partners">
+          <Partners className={styles.section} />
+        </Element>
+        <Element name="organizers">
+          <Organizers className={styles.section} />
+        </Element>
+        <Element name="faq">
+          <FAQ className={styles.section} />
+        </Element>
       </main>
 
       {/* Footer */}
+      <Element name="contact">
+        <Footer className={styles.footer} />
+      </Element>
     </div>
   );
 };

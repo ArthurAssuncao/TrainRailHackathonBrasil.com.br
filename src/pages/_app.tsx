@@ -9,6 +9,9 @@ import { useTranslation, withSSR } from 'react-i18next';
 import SEO from '../../next-seo.config';
 import '../assets/styles/globals.scss';
 import { PWATags } from '../parts/PWATags';
+import i18n from '../utils/i18n';
+
+i18n.isInitialized;
 
 // interface ReactGAProps {
 //   debug: string
@@ -88,6 +91,8 @@ ExtendedApp.getInitialProps = async (): Promise<any> => {
     ...require('../parts/Partners/lang/translation.pt.json'),
     ...require('../parts/Organizers/lang/translation.pt.json'),
     ...require('../parts/FAQ/lang/translation.pt.json'),
+    ...require('../parts/Footer/lang/translation.pt.json'),
+    ...require('../components/ContactForm/lang/translation.pt.json'),
   };
   const en = {
     ...require('../components/NavBar/lang/translation.en.json'),
@@ -100,6 +105,8 @@ ExtendedApp.getInitialProps = async (): Promise<any> => {
     ...require('../parts/Partners/lang/translation.en.json'),
     ...require('../parts/Organizers/lang/translation.en.json'),
     ...require('../parts/FAQ/lang/translation.en.json'),
+    ...require('../parts/Footer/lang/translation.en.json'),
+    ...require('../components/ContactForm/lang/translation.en.json'),
   };
   return {
     initialLanguage: 'pt',

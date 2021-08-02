@@ -28,7 +28,7 @@ const About = (props: AboutProps): JSX.Element => {
           />
         </div>
 
-        <span className={styles.text}>{t('about_text')}</span>
+        <div className={styles.text}>{t('about_text')}</div>
       </Slide>
     </section>
   );
