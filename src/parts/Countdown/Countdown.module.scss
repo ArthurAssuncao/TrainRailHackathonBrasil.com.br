@@ -6,6 +6,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
+
+  @include desktop-up {
+    width: initial;
+  }
 
   .title {
     font-size: var(--text-h3, $text-h3);
