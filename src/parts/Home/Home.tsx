@@ -10,6 +10,7 @@ import { Header } from '../Header';
 import { Organizers } from '../Organizers';
 import { Participate } from '../Participate';
 import { Partners } from '../Partners';
+import { RailwayBorder } from '../RailwayBorder';
 import { Schedule } from '../Schedule';
 import styles from './Home.module.scss';
 
@@ -26,25 +27,39 @@ const Home = (): JSX.Element => {
       {/* Main */}
       <main className={styles.main}>
         <Element name="about">
-          <About className={styles.section} />
+          <RailwayBorder type={0}>
+            <About className={styles.section} />
+          </RailwayBorder>
         </Element>
         <Element name="participate">
-          <Participate className={styles.section} />
+          <RailwayBorder type={1}>
+            <Participate className={styles.section} />
+          </RailwayBorder>
         </Element>
         <Element name="schedule">
-          <Schedule className={styles.section} />
+          <RailwayBorder type={2}>
+            <Schedule className={styles.section} />
+          </RailwayBorder>
         </Element>
         <Element name="countdown">
-          <Countdown className={styles.section} />
+          <RailwayBorder type={1}>
+            <Countdown className={styles.section} />
+          </RailwayBorder>
         </Element>
         <Element name="partners">
-          <Partners className={styles.section} />
+          <RailwayBorder type={2}>
+            <Partners className={styles.section} />
+          </RailwayBorder>
         </Element>
         <Element name="organizers">
-          <Organizers className={styles.section} />
+          <RailwayBorder type={1}>
+            <Organizers className={styles.section} />
+          </RailwayBorder>
         </Element>
         <Element name="faq">
-          <FAQ className={styles.section} />
+          <RailwayBorder type={2}>
+            <FAQ className={styles.section} />
+          </RailwayBorder>
         </Element>
       </main>
 
