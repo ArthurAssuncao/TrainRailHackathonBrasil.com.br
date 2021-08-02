@@ -1,6 +1,12 @@
 import classNames from 'classnames';
 import throttle from 'lodash.throttle';
-import React, { createRef, ReactNode, useEffect, useState } from 'react';
+import React, {
+  createRef,
+  CSSProperties,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import styles from './RailwayBorder.module.scss';
 
 /**
@@ -12,8 +18,9 @@ import styles from './RailwayBorder.module.scss';
 function useVisibility<Element extends HTMLElement>(
   offset = 0,
   throttleMilliseconds = 100
-): [boolean, React.RefObject<Element>] {
+): [boolean, number, React.RefObject<Element>] {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentPercPosition, setCurrentPercPosition] = useState(0);
   const currentElement = createRef<Element>();
 
   const onScroll = throttle(() => {
@@ -23,6 +30,16 @@ function useVisibility<Element extends HTMLElement>(
     }
     const top = currentElement.current.getBoundingClientRect().top;
     setIsVisible(top + offset >= 0 && top - offset <= window.innerHeight);
+    if (top + offset >= 0 && !(top - offset <= window.innerHeight)) {
+      setCurrentPercPosition(0);
+    } else if (!(top + offset >= 0) && top - offset <= window.innerHeight) {
+      setCurrentPercPosition(100);
+    } else if (top + offset >= 0 && top - offset <= window.innerHeight) {
+      const currentPosition = top + offset;
+      const currentPercPositionTemp =
+        100 - (currentPosition * 100) / window.innerHeight;
+      setCurrentPercPosition(Math.ceil(currentPercPositionTemp));
+    }
   }, throttleMilliseconds);
 
   useEffect(() => {
@@ -30,7 +47,7 @@ function useVisibility<Element extends HTMLElement>(
     return () => document.removeEventListener('scroll', onScroll, true);
   });
 
-  return [isVisible, currentElement];
+  return [isVisible, currentPercPosition, currentElement];
 }
 
 interface RailwayBorderProps {
@@ -41,8 +58,13 @@ interface RailwayBorderProps {
 
 const RailwayBorder = (props: RailwayBorderProps): JSX.Element => {
   const { className, children, type } = props;
-  const [isVisible, currentElement] = useVisibility<HTMLDivElement>(100);
+  const [isVisible, currentPercPosition, currentElement] =
+    useVisibility<HTMLDivElement>(0);
   const [startAnimation, setStartAnimation] = useState(false);
+  const style: CSSProperties = {
+    '--railway-perc-position': currentPercPosition.toString() + '%',
+    '--railway-perc-width': currentPercPosition > 0 ? '100%' : '0%',
+  } as React.CSSProperties;
 
   useEffect(() => {
     if (isVisible && !startAnimation) {
@@ -53,8 +75,10 @@ const RailwayBorder = (props: RailwayBorderProps): JSX.Element => {
   return (
     <div
       className={classNames(className, styles.container)}
+      style={style}
       data-type={type}
       data-start-animation={startAnimation}
+      data-start-height-animation={currentPercPosition > 30 ? true : false}
       ref={currentElement}
     >
       {children}
