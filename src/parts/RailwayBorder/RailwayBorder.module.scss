@@ -1,0 +1,175 @@
+@use "sass:math";
+@import '../../assets/styles/sass/resources';
+
+$height: 4px;
+
+@keyframes animation-type0-1 {
+  from {
+    border-left-color: transparent;
+    height: 0;
+  }
+  to {
+    border-left-color: var(--color-accent, $color-accent);
+    height: 100%;
+  }
+}
+
+@keyframes animation-type1-1-mobile {
+  from {
+    border-top-color: transparent;
+    width: 0;
+  }
+  to {
+    border-top-color: var(--color-accent, $color-accent);
+    width: calc(100% - 2rem);
+  }
+}
+
+@keyframes animation-type1-1-desktop {
+  from {
+    border-top-color: transparent;
+    width: 0;
+  }
+  to {
+    border-top-color: var(--color-accent, $color-accent);
+    width: 100%;
+  }
+}
+
+@keyframes animation-type1-2 {
+  from {
+    border-right-color: transparent;
+    height: $height;
+  }
+  to {
+    border-right-color: var(--color-accent, $color-accent);
+    height: 100%;
+  }
+}
+
+@keyframes animation-type2-1-mobile {
+  from {
+    border-top-color: transparent;
+    width: 0;
+  }
+  to {
+    border-top-color: var(--color-accent, $color-accent);
+    width: calc(100% - 2rem);
+    height: $height;
+  }
+}
+
+@keyframes animation-type2-1-desktop {
+  from {
+    border-top-color: transparent;
+    width: 0;
+  }
+  to {
+    border-top-color: var(--color-accent, $color-accent);
+    width: 100%;
+    height: $height;
+  }
+}
+
+@keyframes animation-type2-2 {
+  from {
+    border-left-color: transparent;
+    height: 0;
+  }
+  to {
+    border-left-color: var(--color-accent, $color-accent);
+    height: 100%;
+  }
+}
+
+.container {
+  border: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > * {
+    z-index: 2;
+  }
+
+  &:after {
+    z-index: 1;
+  }
+
+  &[data-type='0'] {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      border-left: $height solid var(--color-accent, $color-accent);
+      height: var(--railway-perc-position, 100%);
+      transition: height 0.5s ease;
+
+      @include desktop-up {
+        left: 0;
+      }
+    }
+  }
+
+  &[data-type='1'] {
+    &[data-start-height-animation='true'] {
+      &:after {
+        height: var(--railway-perc-position, 100%);
+      }
+    }
+
+    &[data-start-height-animation='false'] {
+      &:after {
+        height: 0;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      border-top-right-radius: 10px;
+      border-top: $height solid var(--color-accent, $color-accent);
+      border-right: $height solid var(--color-accent, $color-accent);
+      width: var(--railway-perc-width, 100%);
+      transition: width 0.5s ease, height 1s ease;
+
+      @include desktop-up {
+        left: 0;
+      }
+    }
+  }
+
+  &[data-type='2'] {
+    &[data-start-height-animation='true'] {
+      &:after {
+        height: var(--railway-perc-position, 100%);
+      }
+    }
+
+    &[data-start-height-animation='false'] {
+      &:after {
+        height: 0;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      border-top-left-radius: 10px;
+      border-top: $height solid var(--color-accent, $color-accent);
+      border-left: $height solid var(--color-accent, $color-accent);
+      width: var(--railway-perc-width, 100%);
+      transition: width 0.5s ease, height 1s ease;
+
+      @include desktop-up {
+        right: 0;
+      }
+    }
+  }
+}
