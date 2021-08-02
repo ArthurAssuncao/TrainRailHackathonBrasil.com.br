@@ -37,12 +37,12 @@ const Home = (): JSX.Element => {
           </RailwayBorder>
         </Element>
         <Element name="schedule">
-          <RailwayBorder type={2}>
+          <RailwayBorder type={2} size="half">
             <Schedule className={styles.section} />
           </RailwayBorder>
         </Element>
         <Element name="countdown">
-          <RailwayBorder type={1}>
+          <RailwayBorder type={1} size="half">
             <Countdown className={styles.section} />
           </RailwayBorder>
         </Element>
