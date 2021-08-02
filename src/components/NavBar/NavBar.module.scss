@@ -54,18 +54,18 @@ $navbarHeight: 7.5rem;
 
   .logoLink {
     img {
-      height: 4rem;
-      width: 12rem;
+      height: 5rem !important;
+      width: 15rem !important;
       object-fit: contain;
 
       @include tablet-up {
-        height: 4.5rem;
-        width: 13rem;
+        height: 5rem !important;
+        width: 15rem !important;
       }
 
       @include desktop-up {
-        height: 5rem;
-        width: 15rem;
+        height: 6rem !important;
+        width: 18rem !important;
       }
     }
 
