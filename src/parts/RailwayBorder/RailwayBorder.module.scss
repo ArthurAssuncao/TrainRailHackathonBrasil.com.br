@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '../../assets/styles/sass/resources';
 
 $height: 4px;
@@ -21,7 +22,6 @@ $height: 4px;
   to {
     border-top-color: var(--color-accent, $color-accent);
     width: calc(100% - 2rem);
-    height: $height;
   }
 }
 
@@ -33,7 +33,6 @@ $height: 4px;
   to {
     border-top-color: var(--color-accent, $color-accent);
     width: 100%;
-    height: $height;
   }
 }
 
@@ -90,6 +89,14 @@ $height: 4px;
   align-items: center;
   justify-content: center;
 
+  > * {
+    z-index: 2;
+  }
+
+  &:after {
+    z-index: 1;
+  }
+
   &[data-type='0'] {
     &:after {
       content: '';
@@ -97,19 +104,28 @@ $height: 4px;
       top: 0;
       left: 1rem;
       border-left: $height solid var(--color-accent, $color-accent);
+      height: var(--railway-perc-position, 100%);
+      transition: height 0.5s ease;
 
       @include desktop-up {
         left: 0;
       }
     }
-    &[data-start-animation='true'] {
-      &:after {
-        animation: animation-type0-1 2s ease forwards;
-      }
-    }
   }
 
   &[data-type='1'] {
+    &[data-start-height-animation='true'] {
+      &:after {
+        height: var(--railway-perc-position, 100%);
+      }
+    }
+
+    &[data-start-height-animation='false'] {
+      &:after {
+        height: 0;
+      }
+    }
+
     &:after {
       content: '';
       position: absolute;
@@ -118,24 +134,28 @@ $height: 4px;
       border-top-right-radius: 10px;
       border-top: $height solid var(--color-accent, $color-accent);
       border-right: $height solid var(--color-accent, $color-accent);
+      width: var(--railway-perc-width, 100%);
+      transition: width 0.5s ease, height 1s ease;
 
       @include desktop-up {
         left: 0;
       }
     }
-    &[data-start-animation='true'] {
-      &:after {
-        animation: animation-type1-1-mobile 2s ease forwards,
-          animation-type1-2 2s ease 2s forwards;
-        @include desktop-up {
-          animation: animation-type1-1-desktop 2s ease forwards,
-            animation-type1-2 2s ease 2s forwards;
-        }
-      }
-    }
   }
 
   &[data-type='2'] {
+    &[data-start-height-animation='true'] {
+      &:after {
+        height: var(--railway-perc-position, 100%);
+      }
+    }
+
+    &[data-start-height-animation='false'] {
+      &:after {
+        height: 0;
+      }
+    }
+
     &:after {
       content: '';
       position: absolute;
@@ -144,19 +164,11 @@ $height: 4px;
       border-top-left-radius: 10px;
       border-top: $height solid var(--color-accent, $color-accent);
       border-left: $height solid var(--color-accent, $color-accent);
+      width: var(--railway-perc-width, 100%);
+      transition: width 0.5s ease, height 1s ease;
 
       @include desktop-up {
         right: 0;
-      }
-    }
-    &[data-start-animation='true'] {
-      &:after {
-        animation: animation-type2-1-mobile 2s ease forwards,
-          animation-type2-2 2s ease 2s forwards;
-        @include desktop-up {
-          animation: animation-type2-1-desktop 2s ease forwards,
-            animation-type2-2 2s ease 2s forwards;
-        }
       }
     }
   }
