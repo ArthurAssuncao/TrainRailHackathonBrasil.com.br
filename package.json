@@ -22,8 +22,11 @@
   },
   "dependencies": {
     "@commitlint/config-conventional": "^13.1.0",
+    "@formspree/react": "^2.2.3",
+    "@iconify/icons-bx": "^1.1.2",
     "@iconify/icons-clarity": "^1.1.1",
     "@iconify/icons-emojione-v1": "^1.1.0",
+    "@iconify/icons-ri": "^1.1.0",
     "@types/node": "^16.4.5",
     "@types/react-dom": "^17.0.9",
     "@types/react-lazy-load-image-component": "^1.5.2",
@@ -70,7 +73,8 @@
     "typescript-eslint-parser": "^22.0.0",
     "url-loader": "^4.1.1",
     "worker-timers": "^7.0.35",
-    "yup": "^0.32.9"
+    "yup": "^0.32.9",
+    "yup-locale-pt": "^0.0.8"
   },
   "devDependencies": {
     "@iconify-icons/mdi": "^1.1.17",

@@ -4,6 +4,7 @@ import { Hero } from '../../components/Hero';
 import { About } from '../About';
 import { Countdown } from '../Countdown/Countdown';
 import { FAQ } from '../FAQ';
+import { Footer } from '../Footer';
 import { Header } from '../Header';
 import { Organizers } from '../Organizers';
 import { Participate } from '../Participate';
@@ -33,6 +34,7 @@ const Home = (): JSX.Element => {
       </main>
 
       {/* Footer */}
+      <Footer className={styles.footer} />
     </div>
   );
 };
