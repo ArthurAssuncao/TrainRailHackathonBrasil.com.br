@@ -5,7 +5,7 @@ import { Fade } from 'react-awesome-reveal';
 import { useTranslation } from 'react-i18next';
 import IfsudestemgLogo from '../../assets/images/ifsudestemg-white.png';
 import SebraeLogo from '../../assets/images/sebrae.png';
-import UfpaLogo from '../../assets/images/ufpa.png';
+import UfpaLogo from '../../assets/images/ufpa.svg';
 import UfscLogo from '../../assets/images/ufsc.png';
 import UicLogo from '../../assets/images/uic_logo.svg';
 import { Button } from '../Button';
