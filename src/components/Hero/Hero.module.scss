@@ -66,19 +66,19 @@
 
     :nth-child(1) {
       order: 4;
-      filter: contrast(1.5);
+      filter: contrast(1);
     }
     :nth-child(2) {
       order: 1;
-      filter: contrast(1.1);
+      filter: contrast(1);
     }
     :nth-child(3) {
       order: 2;
-      filter: contrast(1.1);
+      filter: contrast(1.5);
     }
     :nth-child(4) {
       order: 3;
-      filter: contrast(1.1);
+      filter: contrast(1);
     }
     :nth-child(5) {
       order: 5;
