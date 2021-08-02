@@ -9,6 +9,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import * as Yup from 'yup';
 import { ptForm } from 'yup-locale-pt';
+import { Button } from '../Button';
 import styles from './ContactForm.module.scss';
 
 Yup.setLocale(ptForm);
@@ -48,9 +49,9 @@ const ContactForm = (props: ContactFormProps): JSX.Element => {
   // const [isSubmitting, setIsSubmitting] = useState(false);
   const [, handleSubmit] = useForm('mrgrylza');
   const { t } = useTranslation();
-  const placeholderName = t('contactForm_field_name_helper');
-  const placeholderEmail = t('contactForm_field_email_helper');
-  const placeholderMessage = t('contactForm_field_message_helper');
+  const placeholderName = t('contactForm_field_name_title');
+  const placeholderEmail = t('contactForm_field_email_title');
+  const placeholderMessage = t('contactForm_field_message_title');
 
   const formStatusProps: ContactFormStatusProps = {
     success: {
@@ -136,14 +137,14 @@ const ContactForm = (props: ContactFormProps): JSX.Element => {
                   type="text"
                   name="name"
                   value={values.name}
-                  helperText={
+                  helpertext={
                     errors.name && touched.name
                       ? errors.name
                       : fieldsHelper.name
                   }
                   placeholder={placeholderName}
-                  error={errors.name && touched.name ? true : false}
-                  data-error={errors.name && touched.name ? true : false}
+                  error={errors.name && touched.name ? 'true' : 'false'}
+                  data-error={errors.name && touched.name ? 'true' : 'false'}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={styles.nameField}
@@ -159,14 +160,14 @@ const ContactForm = (props: ContactFormProps): JSX.Element => {
                   type="email"
                   name="email"
                   value={values.email}
-                  helperText={
+                  helpertext={
                     errors.email && touched.email
                       ? errors.email
                       : fieldsHelper.email
                   }
                   placeholder={placeholderEmail}
-                  error={errors.email && touched.email ? true : false}
-                  data-error={errors.email && touched.email ? true : false}
+                  error={errors.email && touched.email ? 'true' : 'false'}
+                  data-error={errors.email && touched.email ? 'true' : 'false'}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={styles.emailField}
@@ -184,14 +185,16 @@ const ContactForm = (props: ContactFormProps): JSX.Element => {
                 name="message"
                 value={values.message}
                 rows={3}
-                helperText={
+                helpertext={
                   errors.message && touched.message
                     ? errors.message
                     : fieldsHelper.message
                 }
                 placeholder={placeholderMessage}
-                error={errors.message && touched.message ? true : false}
-                data-error={errors.message && touched.message ? true : false}
+                error={errors.message && touched.message ? 'true' : 'false'}
+                data-error={
+                  errors.message && touched.message ? 'true' : 'false'
+                }
                 onChange={handleChange}
                 onBlur={handleBlur}
                 className={styles.messageField}
@@ -202,7 +205,7 @@ const ContactForm = (props: ContactFormProps): JSX.Element => {
                 className={styles.fieldError}
               />
             </div>
-            <button
+            <Button
               type="submit"
               disabled={isSubmitting}
               className={styles.submitButton}
@@ -211,7 +214,7 @@ const ContactForm = (props: ContactFormProps): JSX.Element => {
               <span className={styles.submitButtonText}>
                 {t('contactForm_field_btn_send_msg')}
               </span>
-            </button>
+            </Button>
             <ToastContainer />
             {displayFormStatus && showFormStatus(formStatus)}
           </Form>

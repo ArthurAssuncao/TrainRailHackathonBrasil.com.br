@@ -8,6 +8,7 @@ import SebraeLogo from '../../assets/images/sebrae.png';
 import UfpaLogo from '../../assets/images/ufpa.png';
 import UfscLogo from '../../assets/images/ufsc.png';
 import UicLogo from '../../assets/images/uic_logo.svg';
+import { Button } from '../Button';
 import styles from './Hero.module.scss';
 import { Railway } from './Railway';
 
@@ -96,6 +97,9 @@ const Hero = (props: HeroProps): JSX.Element => {
             </a>
           </div>
         </div>
+      </Fade>
+      <Fade delay={1200} cascade>
+        <Button className={styles.button}>{t('hero_registration')}</Button>
       </Fade>
     </section>
   );

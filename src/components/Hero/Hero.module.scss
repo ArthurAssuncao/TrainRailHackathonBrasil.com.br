@@ -3,6 +3,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
   top: 7.5rem;
 
@@ -38,10 +39,10 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 80%;
+    width: 90vw;
 
     @include tablet-up {
-      width: 100%;
+      width: 90vw;
       margin-top: 4rem;
     }
 
@@ -100,5 +101,9 @@
         order: 5;
       }
     }
+  }
+
+  .button {
+    margin: 3rem 0;
   }
 }
