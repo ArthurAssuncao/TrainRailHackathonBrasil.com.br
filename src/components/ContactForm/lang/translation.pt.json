@@ -1,0 +1,11 @@
+{
+  "contactForm_success_msg": "Mensagem enviada com sucesso.",
+  "contactForm_error_msg": "Houve algum erro, tente novamente, por favor.",
+  "contactForm_field_name_title": "Seu nome",
+  "contactForm_field_name_helper": "Por favor, digite o seu nome!",
+  "contactForm_field_email_title": "Seu e-mail",
+  "contactForm_field_email_helper": "Por favor, digite o seu e-mail!",
+  "contactForm_field_message_title": "Sobre o que é seu contato?",
+  "contactForm_field_message_helper": "Por favor, digite a mensagem que quer nos enviar!",
+  "contactForm_field_btn_send_msg": "Enviar mensagem"
+}

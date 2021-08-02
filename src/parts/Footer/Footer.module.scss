@@ -1,0 +1,21 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  min-height: 70vh;
+  width: 100vw;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background-alt, $color-background-alt);
+  box-shadow: -5px 0 20px var(--color-card-shadow, $color-card-shadow);
+
+  .socialButtons {
+    color: var(--color-text-alt, $color-text-alt);
+    margin: 2rem 0;
+  }
+
+  .copyright {
+    color: var(--color-text-alt, $color-text-alt);
+  }
+}
