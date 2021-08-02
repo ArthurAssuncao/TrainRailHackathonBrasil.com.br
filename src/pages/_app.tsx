@@ -9,6 +9,9 @@ import { useTranslation, withSSR } from 'react-i18next';
 import SEO from '../../next-seo.config';
 import '../assets/styles/globals.scss';
 import { PWATags } from '../parts/PWATags';
+import i18n from '../utils/i18n';
+
+i18n.isInitialized;
 
 // interface ReactGAProps {
 //   debug: string

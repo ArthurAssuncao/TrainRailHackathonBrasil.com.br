@@ -40,7 +40,7 @@ $navbarHeight: 7.5rem;
 
 .container {
   height: $navbarHeight;
-  width: 100%;
+  width: 100vw;
   background-color: transparent;
   position: absolute;
   top: 0;
@@ -49,7 +49,8 @@ $navbarHeight: 7.5rem;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 2.5rem 0rem 2.5rem;
+  padding: 0rem 3rem 0rem 2.5rem;
+  hyphens: none;
 
   .logoLink {
     img {
@@ -185,6 +186,9 @@ $navbarHeight: 7.5rem;
       }
 
       .menuItemLink {
+        &:hover {
+          cursor: pointer;
+        }
         @include tablet-up {
           display: flex;
           flex-direction: column;

@@ -48,7 +48,7 @@
 
     .field {
       width: 100%;
-      min-height: 4rem;
+      min-height: 3rem;
       border-radius: 0.7rem;
       outline: none;
       border: none;
@@ -86,8 +86,9 @@
 
     .fieldError {
       background-color: var(--color-error, $color-error);
+      color: var(--color-text-alt, $color-text-alt);
       padding: 0.7rem 1rem;
-      border-radius: 0.3rem;
+      border-radius: 2rem;
       max-width: 98%;
     }
 
@@ -97,30 +98,9 @@
   }
 
   .submitButton {
-    min-height: 4rem;
-    border-radius: 0.7rem;
-    outline: none;
-    border: none;
-    margin: 0.75rem 0;
-    padding: 1.5rem;
-    width: 75%;
-    color: var(--color-text-alt, $color-text-alt);
-    background-color: var(--color-accent, $color-accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include tablet-up {
-      width: 50%;
-    }
-
     .submitButtonIcon {
       font-size: 3rem;
       margin-right: 1rem;
-    }
-
-    .submitButtonText {
-      font-weight: bold;
     }
   }
 }

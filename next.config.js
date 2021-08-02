@@ -2,6 +2,8 @@ const withPlugins = require('next-compose-plugins');
 const withPWA = require('next-pwa');
 const path = require('path');
 
+const prod = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   webpack: function (config) {
     config.module.rules.push({
@@ -28,6 +30,7 @@ module.exports = withPlugins(
       {
         pwa: {
           dest: 'public',
+          disable: prod ? false : true,
         },
       },
     ],

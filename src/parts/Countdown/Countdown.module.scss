@@ -6,4 +6,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .title {
+    font-size: var(--text-h3, $text-h3);
+    color: var(--color-accent, $color-accent);
+    margin-bottom: 2rem;
+
+    @include tablet-up {
+      font-size: var(--text-h2, $text-h2);
+      margin-bottom: 4rem;
+    }
+  }
 }
