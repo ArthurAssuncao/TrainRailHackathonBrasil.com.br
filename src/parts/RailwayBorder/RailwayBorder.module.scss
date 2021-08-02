@@ -134,11 +134,12 @@ $height: 4px;
       border-top-right-radius: 10px;
       border-top: $height solid var(--color-accent, $color-accent);
       border-right: $height solid var(--color-accent, $color-accent);
-      width: var(--railway-perc-width, 100%);
+      width: calc(var(--railway-perc-width, 100%) - 2rem);
       transition: width 0.5s ease, height 1s ease;
 
       @include desktop-up {
         left: 0;
+        width: var(--railway-perc-width, 100%);
       }
     }
   }
@@ -164,11 +165,12 @@ $height: 4px;
       border-top-left-radius: 10px;
       border-top: $height solid var(--color-accent, $color-accent);
       border-left: $height solid var(--color-accent, $color-accent);
-      width: var(--railway-perc-width, 100%);
+      width: calc(var(--railway-perc-width, 100%) - 2rem);
       transition: width 0.5s ease, height 1s ease;
 
       @include desktop-up {
         right: 0;
+        width: var(--railway-perc-width, 100%);
       }
     }
   }
