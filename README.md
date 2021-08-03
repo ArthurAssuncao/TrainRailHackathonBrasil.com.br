@@ -32,12 +32,12 @@
 
 <table align="center">
 	  <tr>
-    	<td align="center"><strong>Seção Header</strong></td>
-        <td align="center"><strong>Seção Cronômetro</strong></td>
+    	<td align="center"><strong>Seção Header+Hero</strong></td>
+        <td align="center"><strong>Navegação no site</strong></td>
     </tr>
     <tr>
-        <td align="center"><img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/mobile-1-mockup.png" alt="Tela mobile" width="75%" /></td>
-        <td align="center"><img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/mobile-2-mockup.png"  alt="Tela mobile home" width="75%" /></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/mobile-1-mockup.png" alt="Seção Header+Hero" width="40%" /></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/mobile-full-min.gif"  alt="Navegação no site" width="75%"  /></td>
     </tr>
 </table>
 
@@ -81,22 +81,22 @@ O layout do projeto foi desenvolvido utilizando o software Figma e pode ser aces
 
 <table align="center">
 	  <tr>
-    	<td align="center"><strong>Seção Header</strong></td>
-        <td align="center"><strong>Seção Cronômetro</strong></td>
+    	<td align="center"><strong>Seção Header+Hero</strong></td>
+        <td align="center"><strong>Seção Perguntas Frequentes</strong></td>
     </tr>
     <tr>
-        <td align="center"><img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/mobile-1-mockup.png" alt="Tela mobile" width="75%" /></td>
-        <td align="center"><img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/mobile-2-mockup.png"  alt="Tela mobile home" width="75%" /></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/mobile-1-mockup.png" alt="Seção Header+Hero" width="75%" /></td>
+        <td align="center"><img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/mobile-2-mockup.png"  alt="Seção Perguntas Frequentes" width="75%" /></td>
     </tr>
 </table>
 
-#### :computer: Seção Header em desktop
+#### :computer: Seção Header+Hero em desktop
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/desktop-1-mockup.png" height="500px" alt="Seção Header em desktop" />
+<img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/desktop-1-mockup.png" height="500px" alt="Seção Header+Hero em desktop" />
 </p>
 
-#### :computer: Seção Cronômetro em desktop
+#### :computer: Seção Cronômetro+Parceiros em desktop
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/ArthurAssuncao/TrainRailHackathonBrasil.com.br/main/docs/screenshots/desktop-2-mockup.png" height="500px" alt="Seção Cronômetro em desktop" />
