@@ -1,6 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import { ToastContainer } from 'react-toastify';
+import { ButtonScrollToTop } from '../../components/ButtonScrollToTop';
 import { Hero } from '../../components/Hero';
 import { About } from '../About';
 import { Countdown } from '../Countdown/Countdown';
@@ -67,6 +68,8 @@ const Home = (): JSX.Element => {
       <Element name="contact">
         <Footer className={styles.footer} />
       </Element>
+
+      <ButtonScrollToTop className={styles.buttonToTop} />
     </div>
   );
 };
