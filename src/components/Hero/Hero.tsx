@@ -99,7 +99,9 @@ const Hero = (props: HeroProps): JSX.Element => {
         </div>
       </Fade>
       <Fade delay={1200} cascade>
-        <Button className={styles.button}>{t('hero_registration')}</Button>
+        <Button className={styles.button} animated={true}>
+          {t('hero_registration')}
+        </Button>
       </Fade>
     </section>
   );
