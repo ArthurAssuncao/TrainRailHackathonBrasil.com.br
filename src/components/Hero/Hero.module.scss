@@ -8,6 +8,17 @@
   top: 7.5rem;
 
   .railway {
+    @include tablet-up {
+      margin-bottom: 3rem;
+
+      @media screen and (min-height: 600px) {
+        margin-bottom: 7rem;
+      }
+
+      @media screen and (min-height: 800px) {
+        margin-bottom: 16rem;
+      }
+    }
   }
 
   .textWrapper {
@@ -43,7 +54,15 @@
 
     @include tablet-up {
       width: 90vw;
-      margin-top: 4rem;
+      margin-top: 2rem;
+
+      @media screen and (min-height: 600px) {
+        margin-top: 3rem;
+      }
+
+      @media screen and (min-height: 800px) {
+        margin-top: 8rem;
+      }
     }
 
     .icon {
@@ -104,6 +123,17 @@
   }
 
   .button {
-    margin: 3rem 0;
+    margin-top: 3rem;
+    @include tablet-up {
+      margin-top: 2rem;
+
+      @media screen and (min-height: 600px) {
+        margin-top: 3rem;
+      }
+
+      @media screen and (min-height: 800px) {
+        margin-top: 6rem;
+      }
+    }
   }
 }
