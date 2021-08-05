@@ -8,6 +8,13 @@ interface RailwayProps {
 const Railway = (props: RailwayProps): JSX.Element => {
   const { className } = props;
 
+  const cor1 = '#0aa848';
+  const cor2 = '#fedd00';
+  const cor3 = '#111';
+  const cor4 = '#f49506';
+  const cor5 = '#1076c4';
+  const cor6 = '#ff6961';
+
   return (
     <div className={classNames(className, styles.container)}>
       <div className={styles.titleWrapper}>
@@ -33,7 +40,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
           <title id="title4">Layer 1</title>
           <path
             className={styles.line}
-            stroke="#0aa848"
+            stroke={cor1}
             strokeWidth="3px"
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -43,7 +50,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
           />
           <path
             className={styles.line}
-            stroke="#fedd00"
+            stroke={cor2}
             strokeWidth="3px"
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -53,7 +60,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
           />
           <path
             className={styles.line}
-            stroke="#f49506"
+            stroke={cor3}
             strokeWidth="3px"
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -63,7 +70,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
           />
           <path
             className={styles.line}
-            stroke="#4d509f"
+            stroke={cor4}
             strokeWidth="3px"
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -73,7 +80,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
           />
           <path
             className={styles.line}
-            stroke="#1076c4"
+            stroke={cor5}
             strokeWidth="3px"
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -83,7 +90,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
           />
           <path
             className={styles.line}
-            stroke="#ff6961"
+            stroke={cor6}
             strokeWidth="3px"
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -94,7 +101,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
           <g transform="rotate(-179.998,581.49,281.56)" id="svg_16">
             <path
               className={styles.line}
-              stroke="#0aa848"
+              stroke={cor1}
               strokeWidth="3px"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -104,7 +111,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
             />
             <path
               className={styles.line}
-              stroke="#fedd00"
+              stroke={cor2}
               strokeWidth="3px"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -114,7 +121,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
             />
             <path
               className={styles.line}
-              stroke="#f49506"
+              stroke={cor3}
               strokeWidth="3px"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -124,7 +131,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
             />
             <path
               className={styles.line}
-              stroke="#1076c4"
+              stroke={cor4}
               strokeWidth="3px"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -134,7 +141,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
             />
             <path
               className={styles.line}
-              stroke="#4d509f"
+              stroke={cor5}
               strokeWidth="3px"
               strokeMiterlimit="10"
               strokeLinecap="round"
@@ -144,7 +151,7 @@ const Railway = (props: RailwayProps): JSX.Element => {
             />
             <path
               className={styles.line}
-              stroke="#ff6961"
+              stroke={cor6}
               strokeWidth="3px"
               strokeMiterlimit="10"
               strokeLinecap="round"
