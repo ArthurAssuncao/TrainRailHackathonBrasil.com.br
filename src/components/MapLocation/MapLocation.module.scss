@@ -1,0 +1,102 @@
+@import '../../assets/styles/sass/resources';
+
+$pin-animation-time: 6s;
+$pin-text-animation-time: 5s;
+
+@keyframes pin-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    r: 120;
+    opacity: 0;
+  }
+}
+
+@keyframes pin-text-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+
+  .mapContainer {
+    position: relative;
+  }
+
+  .mapSvg {
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+
+    .mapGradient {
+      stop {
+        &:nth-child(1) {
+          stop-color: var(--color-accent, $color-accent);
+        }
+        &:nth-child(2) {
+          stop-color: var(--color-primary, $color-primary);
+        }
+      }
+    }
+
+    .pinFront {
+      fill: var(--color-secondary, $color-secondary);
+
+      @include tablet-up {
+        fill: var(--color-text-alt, $color-text-alt);
+      }
+    }
+
+    $numPins: 1, 2, 3, 4, 5, 6, 7, 8;
+
+    @each $pin in $numPins {
+      .pin#{$pin} {
+        .pinBack {
+          animation: pin-animation
+            $pin-animation-time
+            ease
+            #{($pin - 1) *
+            1s}
+            infinite;
+        }
+      }
+      .pinTextWrapper#{$pin} {
+        .pinText {
+          animation: pin-text-animation
+            $pin-text-animation-time
+            ease
+            #{random(8) *
+            1.5s}
+            infinite
+            alternate;
+        }
+      }
+    }
+
+    .pinTextWrapper {
+      .pinText {
+        display: none;
+        fill: var(--color-accent, $color-accent);
+        font-weight: bold;
+        text-align: center;
+
+        @include tablet-up {
+          display: flex;
+          font-size: var(--text-caption, $text-caption);
+        }
+        @include desktop-up {
+          // font-size: var(--text-body, $text-body);
+        }
+      }
+    }
+  }
+}

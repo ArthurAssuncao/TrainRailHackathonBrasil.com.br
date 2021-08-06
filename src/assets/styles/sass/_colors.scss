@@ -11,11 +11,12 @@ $color-text-gray: #a7a7a7;
 $color-text-label: #fff;
 $color-text-disabled: #dbdbdb;
 $color-text-highlight: #0f9ad7;
-$color-primary: #1076c4;
+$color-primary: #0fd7b0;
 $color-accent: #0f9ad7;
 $color-accent-active: darken(#0f9ad7, 10);
-$color-secondary: #4d5458;
-$color-secondary-light: lighten(#4d5458, 10);
+$color-accent-alpha: rgba(15, 154, 215, 0.7);
+$color-secondary: #d74b0f;
+$color-secondary-light: lighten(#d74b0f, 10);
 $color-warning: #ffa061;
 $color-error: #ff6961;
 $color-card-shadow: rgba(15, 154, 215, 0.2);
@@ -28,3 +29,9 @@ $color-text-gray-dark: #dbdbdb;
 $color-text-label-dark: #aaaaaa;
 $color-text-disabled-dark: #686868;
 $color-container-shadow-dark: rgba(255, 255, 255, 0.5);
+
+$gradient: linear-gradient(
+  to right,
+  var(--color-accent, $color-accent) 0%,
+  var(--color-primary, $color-primary) 100%
+);
