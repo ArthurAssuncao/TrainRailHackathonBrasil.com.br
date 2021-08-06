@@ -143,6 +143,7 @@ Esse projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 Mockups criados a partir do site [MockuPhone.com](https://mockuphone.com/).
 Uso de partes do código [DC Metro Lines Map (Animated SVG Path)](https://codepen.io/mggwxyz/pen/dVKPZV) hospedado no CodePen e desenvolvido por Michael Gilbertson.
 Uso de partes do código [Location Map](https://codepen.io/team/digitalocean/pen/JKAqvE) hospedado no CodePen e desenvolvido por DigitalOcean.
+Uso da imagem do mapa do mundo em svg retirada da wikipedia.
 
 <hr>
 
