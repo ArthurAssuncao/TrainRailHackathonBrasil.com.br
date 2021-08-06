@@ -7,6 +7,10 @@
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+::selection {
+  background: var(--color-accent-alpha, $color-accent-alpha);
+}
+
 html,
 body {
   padding: 0;

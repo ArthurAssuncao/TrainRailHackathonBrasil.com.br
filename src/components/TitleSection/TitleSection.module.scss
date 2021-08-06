@@ -4,6 +4,7 @@
   height: 5rem;
   padding: 0 5rem;
   background-color: var(--color-accent, $color-accent);
+  background-image: var(--gradient, $gradient);
   color: var(--color-text-alt, $color-text-alt);
   display: flex;
   align-items: center;

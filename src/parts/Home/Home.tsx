@@ -8,6 +8,7 @@ import { Countdown } from '../Countdown/Countdown';
 import { FAQ } from '../FAQ';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
+import { Map } from '../Map';
 import { Organizers } from '../Organizers';
 import { Participate } from '../Participate';
 import { Partners } from '../Partners';
@@ -47,18 +48,23 @@ const Home = (): JSX.Element => {
             <Countdown className={styles.section} />
           </RailwayBorder>
         </Element>
-        <Element name="partners">
+        <Element name="map">
           <RailwayBorder type={2}>
+            <Map className={styles.section} />
+          </RailwayBorder>
+        </Element>
+        <Element name="partners">
+          <RailwayBorder type={1}>
             <Partners className={styles.section} />
           </RailwayBorder>
         </Element>
         <Element name="organizers">
-          <RailwayBorder type={1}>
+          <RailwayBorder type={2}>
             <Organizers className={styles.section} />
           </RailwayBorder>
         </Element>
         <Element name="faq">
-          <RailwayBorder type={2}>
+          <RailwayBorder type={1}>
             <FAQ className={styles.section} />
           </RailwayBorder>
         </Element>

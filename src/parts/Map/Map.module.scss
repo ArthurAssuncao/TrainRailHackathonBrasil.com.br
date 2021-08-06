@@ -1,0 +1,21 @@
+@import '../../assets/styles/sass/resources';
+
+.container {
+  min-height: 50vh;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  .title {
+    font-size: var(--text-h3, $text-h3);
+    color: var(--color-accent, $color-accent);
+    margin-bottom: 2rem;
+
+    @include tablet-up {
+      font-size: var(--text-h2, $text-h2);
+      margin-bottom: 4rem;
+    }
+  }
+}

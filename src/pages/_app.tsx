@@ -93,6 +93,8 @@ ExtendedApp.getInitialProps = async (): Promise<any> => {
     ...require('../parts/FAQ/lang/translation.pt.json'),
     ...require('../parts/Footer/lang/translation.pt.json'),
     ...require('../components/ContactForm/lang/translation.pt.json'),
+    ...require('../parts/Map/lang/translation.pt.json'),
+    ...require('../components/MapLocation/lang/translation.pt.json'),
   };
   const en = {
     ...require('../components/NavBar/lang/translation.en.json'),
@@ -107,6 +109,8 @@ ExtendedApp.getInitialProps = async (): Promise<any> => {
     ...require('../parts/FAQ/lang/translation.en.json'),
     ...require('../parts/Footer/lang/translation.en.json'),
     ...require('../components/ContactForm/lang/translation.en.json'),
+    ...require('../parts/Map/lang/translation.en.json'),
+    ...require('../components/MapLocation/lang/translation.en.json'),
   };
   return {
     initialLanguage: 'pt',
